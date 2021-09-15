@@ -1,0 +1,16 @@
+com.example.dotdot
+com.example.dotdot.aop
+com.example.dotdot.constant
+com.example.dotdot.controller
+com.example.dotdot.dao
+com.example.dotdot.daoimpl
+com.example.dotdot.entity
+com.example.dotdot.repository
+com.example.dotdot.service
+com.example.dotdot.serviceimpl
+com.example.dotdot.utils.apimsgutils
+com.example.dotdot.utils.apputils
+com.example.dotdot.utils.httpclientutils
+com.example.dotdot.utils.msgutils
+com.example.dotdot.utils.sessionutils
+com.example.dotdot.utils.timeutils

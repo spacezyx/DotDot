@@ -1,0 +1,209 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > RobotController</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.example.dotdot.controller</a>
+</div>
+
+<h1>Coverage Summary for Class: RobotController (com.example.dotdot.controller)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">RobotController</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (5/5)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (32/32)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.example.dotdot.controller;
+<i class="no-highlight">2</i>&nbsp;
+<i class="no-highlight">3</i>&nbsp;import com.example.dotdot.entity.Robot;
+<i class="no-highlight">4</i>&nbsp;import com.example.dotdot.utils.apputils.APPUtil;
+<i class="no-highlight">5</i>&nbsp;import com.example.dotdot.service.RobotService;
+<i class="no-highlight">6</i>&nbsp;import net.sf.json.JSONObject;
+<i class="no-highlight">7</i>&nbsp;import org.springframework.beans.factory.annotation.Autowired;
+<i class="no-highlight">8</i>&nbsp;import org.springframework.web.bind.annotation.RequestBody;
+<i class="no-highlight">9</i>&nbsp;import org.springframework.web.bind.annotation.RequestMapping;
+<i class="no-highlight">10</i>&nbsp;import org.springframework.web.bind.annotation.RestController;
+<i class="no-highlight">11</i>&nbsp;
+<i class="no-highlight">12</i>&nbsp;import java.util.List;
+<i class="no-highlight">13</i>&nbsp;
+<i class="no-highlight">14</i>&nbsp;
+<i class="no-highlight">15</i>&nbsp;@RestController
+<b class="fc"><i class="no-highlight">16</i>&nbsp;public class RobotController {</b>
+<i class="no-highlight">17</i>&nbsp;
+<i class="no-highlight">18</i>&nbsp;    @Autowired
+<i class="no-highlight">19</i>&nbsp;    private RobotService robotService;
+<i class="no-highlight">20</i>&nbsp;
+<i class="no-highlight">21</i>&nbsp;    /**
+<i class="no-highlight">22</i>&nbsp;     * 通过user_id获取所有的机器人
+<i class="no-highlight">23</i>&nbsp;     * @param params   &quot;user_id&quot; int
+<i class="no-highlight">24</i>&nbsp;     * @return List&lt;Robot&gt;
+<i class="no-highlight">25</i>&nbsp;     * Robot: Integer id,Integer user_id,String name,String apikey,
+<i class="no-highlight">26</i>&nbsp;     *                  String last_time,String establish_time,Boolean valid,Integer used_times
+<i class="no-highlight">27</i>&nbsp;     */
+<i class="no-highlight">28</i>&nbsp;    @RequestMapping(&quot;/getRobots&quot;)
+<i class="no-highlight">29</i>&nbsp;    public List&lt;Robot&gt; getRobots(@RequestBody Object params) {
+<b class="fc"><i class="no-highlight">30</i>&nbsp;        JSONObject jsonObject = JSONObject.fromObject(params);</b>
+<b class="fc"><i class="no-highlight">31</i>&nbsp;        Integer user_id = jsonObject.getInt(&quot;user_id&quot;);</b>
+<b class="fc"><i class="no-highlight">32</i>&nbsp;        return robotService.getRobots(user_id);</b>
+<i class="no-highlight">33</i>&nbsp;    }
+<i class="no-highlight">34</i>&nbsp;
+<i class="no-highlight">35</i>&nbsp;    /**
+<i class="no-highlight">36</i>&nbsp;     * 修改该机器人信息
+<i class="no-highlight">37</i>&nbsp;     * Robot: Integer id,Integer user_id,String name,String apikey,
+<i class="no-highlight">38</i>&nbsp;     *                  String last_time,String establish_time,Boolean valid,Integer used_times
+<i class="no-highlight">39</i>&nbsp;     * 目前可改name valid last_time
+<i class="no-highlight">40</i>&nbsp;     * @param params  &quot;id&quot; int   &quot;name&quot; string    &quot;last_time&quot; string    &quot;valid&quot; boolean
+<i class="no-highlight">41</i>&nbsp;     * @return boolean true
+<i class="no-highlight">42</i>&nbsp;     */
+<i class="no-highlight">43</i>&nbsp;    @RequestMapping(&quot;/modifyRobot&quot;)
+<i class="no-highlight">44</i>&nbsp;    public boolean modifyRobot(@RequestBody Object params) {
+<b class="fc"><i class="no-highlight">45</i>&nbsp;        JSONObject jsonObject = JSONObject.fromObject(params);</b>
+<b class="fc"><i class="no-highlight">46</i>&nbsp;        Integer id = jsonObject.getInt(&quot;id&quot;);</b>
+<b class="fc"><i class="no-highlight">47</i>&nbsp;        String name = jsonObject.getString(&quot;name&quot;);</b>
+<b class="fc"><i class="no-highlight">48</i>&nbsp;        String last_time = jsonObject.getString(&quot;last_time&quot;);</b>
+<b class="fc"><i class="no-highlight">49</i>&nbsp;        Boolean valid = jsonObject.getBoolean(&quot;valid&quot;);</b>
+<b class="fc"><i class="no-highlight">50</i>&nbsp;        robotService.modifyRobot(id, name, valid,last_time);</b>
+<b class="fc"><i class="no-highlight">51</i>&nbsp;        return true;</b>
+<i class="no-highlight">52</i>&nbsp;    }
+<i class="no-highlight">53</i>&nbsp;
+<i class="no-highlight">54</i>&nbsp;    /**
+<i class="no-highlight">55</i>&nbsp;     * 更新机器人的APISecret
+<i class="no-highlight">56</i>&nbsp;     * Robot: Integer id,Integer user_id,String name,String apikey,
+<i class="no-highlight">57</i>&nbsp;     *                  String last_time,String establish_time,Boolean valid,Integer used_times
+<i class="no-highlight">58</i>&nbsp;     * @param params  &quot;id&quot; int
+<i class="no-highlight">59</i>&nbsp;     * @return boolean true
+<i class="no-highlight">60</i>&nbsp;     */
+<i class="no-highlight">61</i>&nbsp;    @RequestMapping(&quot;/updateAPISecret&quot;)
+<i class="no-highlight">62</i>&nbsp;    public String updateAPISecret(@RequestBody Object params) {
+<b class="fc"><i class="no-highlight">63</i>&nbsp;        JSONObject jsonObject = JSONObject.fromObject(params);</b>
+<b class="fc"><i class="no-highlight">64</i>&nbsp;        Integer id = jsonObject.getInt(&quot;id&quot;);</b>
+<i class="no-highlight">65</i>&nbsp;
+<b class="fc"><i class="no-highlight">66</i>&nbsp;        String apikey = jsonObject.getString(&quot;apikey&quot;);</b>
+<b class="fc"><i class="no-highlight">67</i>&nbsp;        String apisecret = APPUtil.getAPISecret(apikey);</b>
+<b class="fc"><i class="no-highlight">68</i>&nbsp;        robotService.updateAPISecret(id,apisecret);</b>
+<b class="fc"><i class="no-highlight">69</i>&nbsp;        return apisecret;</b>
+<i class="no-highlight">70</i>&nbsp;    }
+<i class="no-highlight">71</i>&nbsp;
+<i class="no-highlight">72</i>&nbsp;
+<i class="no-highlight">73</i>&nbsp;    /**
+<i class="no-highlight">74</i>&nbsp;     * 新增机器人
+<i class="no-highlight">75</i>&nbsp;     * 加机器人之前会先看看这个用户是否存在未激活机器人 如果存在则返回false
+<i class="no-highlight">76</i>&nbsp;     * 只有没有机器人或已有机器人全部激活才能新增机器人 并返回true
+<i class="no-highlight">77</i>&nbsp;     * Robot: Integer id,Integer user_id,String name,String apikey,
+<i class="no-highlight">78</i>&nbsp;     *                  String last_time,String establish_time,Boolean valid,Integer used_times
+<i class="no-highlight">79</i>&nbsp;     * @param params  &quot;user_id&quot; int    &quot;name&quot; string    &quot;last_time&quot; string    &quot;establish_time&quot; string    &quot;valid&quot; boolean    &quot;used_times&quot; int &quot;type&quot;  int
+<i class="no-highlight">80</i>&nbsp;     * @return boolean true/false
+<i class="no-highlight">81</i>&nbsp;     */
+<i class="no-highlight">82</i>&nbsp;    //加机器人之前会先看看这个用户是否存在未激活机器人 如果存在则返回false 只有没有机器人或已有机器人全部激活才能新增机器人
+<i class="no-highlight">83</i>&nbsp;    @RequestMapping(&quot;/addRobot&quot;)
+<i class="no-highlight">84</i>&nbsp;    public boolean addRobot(@RequestBody Object params){
+<b class="fc"><i class="no-highlight">85</i>&nbsp;        JSONObject jsonObject = JSONObject.fromObject(params);</b>
+<b class="fc"><i class="no-highlight">86</i>&nbsp;        Integer user_id = jsonObject.getInt(&quot;user_id&quot;);</b>
+<b class="fc"><i class="no-highlight">87</i>&nbsp;        String name = jsonObject.getString(&quot;name&quot;);</b>
+<b class="fc"><i class="no-highlight">88</i>&nbsp;        String apiKey = APPUtil.getAPIKey();</b>
+<b class="fc"><i class="no-highlight">89</i>&nbsp;        String last_time = jsonObject.getString(&quot;last_time&quot;);</b>
+<b class="fc"><i class="no-highlight">90</i>&nbsp;        String establish_time = jsonObject.getString(&quot;establish_time&quot;);</b>
+<b class="fc"><i class="no-highlight">91</i>&nbsp;        Boolean valid = jsonObject.getBoolean(&quot;valid&quot;);</b>
+<b class="fc"><i class="no-highlight">92</i>&nbsp;        Integer used_times = jsonObject.getInt(&quot;used_times&quot;);</b>
+<b class="fc"><i class="no-highlight">93</i>&nbsp;        Integer type = jsonObject.getInt(&quot;type&quot;);</b>
+<b class="fc"><i class="no-highlight">94</i>&nbsp;        List&lt;Robot&gt; invalidRobots = robotService.getInvalidRobots(user_id);</b>
+<b class="fc"><i class="no-highlight">95</i>&nbsp;        System.out.println(invalidRobots);</b>
+<b class="fc"><i class="no-highlight">96</i>&nbsp;        if(invalidRobots.isEmpty()){</b>
+<b class="fc"><i class="no-highlight">97</i>&nbsp;            robotService.addRobot(user_id,name,apiKey,last_time,establish_time,valid,used_times,type);</b>
+<b class="fc"><i class="no-highlight">98</i>&nbsp;            return true;</b>
+<i class="no-highlight">99</i>&nbsp;        }
+<i class="no-highlight">100</i>&nbsp;        else
+<b class="fc"><i class="no-highlight">101</i>&nbsp;            return false;</b>
+<i class="no-highlight">102</i>&nbsp;    }
+<i class="no-highlight">103</i>&nbsp;
+<i class="no-highlight">104</i>&nbsp;}
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2021-09-07 23:13</div>
+</div>
+</body>
+</html>

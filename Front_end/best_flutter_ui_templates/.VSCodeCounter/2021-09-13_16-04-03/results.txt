@@ -1,0 +1,142 @@
+Date : 2021-09-13 16:04:03
+Directory : c:\Final\源代码\Front_end\best_flutter_ui_templates
+Total : 74 files,  8317 codes, 711 comments, 587 blanks, all 9615 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| Dart       |         49 |      7,745 |        578 |        510 |      8,833 |
+| JSON       |          3 |        168 |          0 |          3 |        171 |
+| XML        |          9 |        134 |         56 |         13 |        203 |
+| Groovy     |          3 |        100 |          5 |         24 |        129 |
+| HTML       |          1 |         79 |         14 |          6 |         99 |
+| YAML       |          2 |         52 |         57 |         17 |        126 |
+| Markdown   |          2 |         13 |          0 |          9 |         22 |
+| Properties |          3 |         13 |          1 |          2 |         16 |
+| Swift      |          1 |         12 |          0 |          2 |         14 |
+| C++        |          1 |          1 |          0 |          1 |          2 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                           | files      | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                              |         74 |      8,317 |        711 |        587 |      9,615 |
+| android                                                                                                        |         13 |        186 |         60 |         37 |        283 |
+| android\app                                                                                                    |          8 |        134 |         59 |         26 |        219 |
+| android\app\src                                                                                                |          7 |         73 |         54 |         11 |        138 |
+| android\app\src\debug                                                                                          |          1 |          4 |          3 |          1 |          8 |
+| android\app\src\main                                                                                           |          5 |         61 |         48 |          8 |        117 |
+| android\app\src\main\res                                                                                       |          4 |         26 |         32 |          6 |         64 |
+| android\app\src\main\res\drawable                                                                              |          1 |          4 |          7 |          2 |         13 |
+| android\app\src\main\res\drawable-v21                                                                          |          1 |          4 |          7 |          2 |         13 |
+| android\app\src\main\res\values                                                                                |          1 |          9 |          9 |          1 |         19 |
+| android\app\src\main\res\values-night                                                                          |          1 |          9 |          9 |          1 |         19 |
+| android\app\src\profile                                                                                        |          1 |          8 |          3 |          2 |         13 |
+| android\gradle                                                                                                 |          1 |          5 |          1 |          1 |          7 |
+| android\gradle\wrapper                                                                                         |          1 |          5 |          1 |          1 |          7 |
+| ios                                                                                                            |          7 |        222 |          2 |          9 |        233 |
+| ios\Runner                                                                                                     |          7 |        222 |          2 |          9 |        233 |
+| ios\Runner\Assets.xcassets                                                                                     |          3 |        148 |          0 |          4 |        152 |
+| ios\Runner\Assets.xcassets\AppIcon.appiconset                                                                  |          1 |        122 |          0 |          1 |        123 |
+| ios\Runner\Assets.xcassets\LaunchImage.imageset                                                                |          2 |         26 |          0 |          3 |         29 |
+| ios\Runner\Base.lproj                                                                                          |          2 |         61 |          2 |          2 |         65 |
+| lib                                                                                                            |         48 |      7,740 |        558 |        503 |      8,801 |
+| lib\Login                                                                                                      |          4 |        868 |        109 |         61 |      1,038 |
+| lib\custom_drawer                                                                                              |          2 |        537 |         33 |         25 |        595 |
+| lib\fitness_app                                                                                                |         26 |      4,561 |        330 |        309 |      5,200 |
+| lib\fitness_app\announcement                                                                                   |          1 |        146 |          1 |         20 |        167 |
+| lib\fitness_app\bottom_navigation_view                                                                         |          1 |        356 |          1 |         22 |        379 |
+| lib\fitness_app\message                                                                                        |          4 |        451 |         20 |         31 |        502 |
+| lib\fitness_app\models                                                                                         |          1 |         45 |          0 |          5 |         50 |
+| lib\fitness_app\online_test                                                                                    |          6 |      1,419 |        169 |         94 |      1,682 |
+| lib\fitness_app\online_test\models                                                                             |          1 |         22 |         18 |          4 |         44 |
+| lib\fitness_app\robot                                                                                          |          8 |      1,480 |         93 |         80 |      1,653 |
+| lib\fitness_app\ui_view                                                                                        |          2 |        188 |         34 |          7 |        229 |
+| lib\introduction_animation                                                                                     |          8 |        887 |         14 |         51 |        952 |
+| lib\introduction_animation\components                                                                          |          7 |        777 |         14 |         40 |        831 |
+| test                                                                                                           |          1 |          5 |         20 |          7 |         32 |
+| web                                                                                                            |          2 |        102 |         14 |          7 |        123 |
++----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                                       | language   | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\README.md                                                     | Markdown   |         10 |          0 |          7 |         17 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\analysis_options.yaml                                         | YAML       |          3 |         23 |          4 |         30 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\android\app\build.gradle                                      | Groovy     |         61 |          5 |         15 |         81 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\android\app\src\debug\AndroidManifest.xml                     | XML        |          4 |          3 |          1 |          8 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\android\app\src\main\AndroidManifest.xml                      | XML        |         35 |         16 |          2 |         53 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\android\app\src\main\res\drawable-v21\launch_background.xml   | XML        |          4 |          7 |          2 |         13 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\android\app\src\main\res\drawable\launch_background.xml       | XML        |          4 |          7 |          2 |         13 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\android\app\src\main\res\values-night\styles.xml              | XML        |          9 |          9 |          1 |         19 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\android\app\src\main\res\values\styles.xml                    | XML        |          9 |          9 |          1 |         19 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\android\app\src\profile\AndroidManifest.xml                   | XML        |          8 |          3 |          2 |         13 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\android\build.gradle                                          | Groovy     |         27 |          0 |          5 |         32 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\android\gradle.properties                                     | Properties |          4 |          0 |          1 |          5 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\android\gradle\wrapper\gradle-wrapper.properties              | Properties |          5 |          1 |          1 |          7 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\android\key.properties                                        | Properties |          4 |          0 |          0 |          4 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\android\settings.gradle                                       | Groovy     |         12 |          0 |          4 |         16 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\ios\Runner\AppDelegate.swift                                  | Swift      |         12 |          0 |          2 |         14 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\ios\Runner\Assets.xcassets\AppIcon.appiconset\Contents.json   | JSON       |        122 |          0 |          1 |        123 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\ios\Runner\Assets.xcassets\LaunchImage.imageset\Contents.json | JSON       |         23 |          0 |          1 |         24 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\ios\Runner\Assets.xcassets\LaunchImage.imageset\README.md     | Markdown   |          3 |          0 |          2 |          5 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\ios\Runner\Base.lproj\LaunchScreen.storyboard                 | XML        |         36 |          1 |          1 |         38 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\ios\Runner\Base.lproj\Main.storyboard                         | XML        |         25 |          1 |          1 |         27 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\ios\Runner\Runner-Bridging-Header.h                           | C++        |          1 |          0 |          1 |          2 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\Login\Login_dialog.dart                                   | Dart       |         38 |          3 |          4 |         45 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\Login\Vercode.dart                                        | Dart       |        169 |         19 |         12 |        200 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\Login\login.dart                                          | Dart       |        242 |         49 |         21 |        312 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\Login\register.dart                                       | Dart       |        419 |         38 |         24 |        481 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\aboutus.dart                                              | Dart       |         95 |          0 |          4 |         99 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\app_theme.dart                                            | Dart       |         77 |          0 |         13 |         90 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\custom_drawer\drawer_user_controller.dart                 | Dart       |        205 |          9 |         10 |        224 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\custom_drawer\home_drawer.dart                            | Dart       |        332 |         24 |         15 |        371 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\feedback_screen.dart                                      | Dart       |        325 |         65 |         14 |        404 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\fitness_app\announcement\announcement_screen.dart         | Dart       |        146 |          1 |         20 |        167 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\fitness_app\bottom_navigation_view\bottom_bar_view.dart   | Dart       |        356 |          1 |         22 |        379 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\fitness_app\chat_view.dart                                | Dart       |        251 |         12 |         25 |        288 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\fitness_app\fitness_app_home_screen.dart                  | Dart       |        147 |          0 |         13 |        160 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\fitness_app\fitness_app_theme.dart                        | Dart       |         78 |          0 |         12 |         90 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\fitness_app\message\message_screen.dart                   | Dart       |        168 |          0 |         17 |        185 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\fitness_app\message\message_view.dart                     | Dart       |        149 |          1 |          4 |        154 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\fitness_app\message\modify_dialog.dart                    | Dart       |         64 |          4 |          6 |         74 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\fitness_app\message\no_more_message_view.dart             | Dart       |         70 |         15 |          4 |         89 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\fitness_app\models\tabIcon_data.dart                      | Dart       |         45 |          0 |          5 |         50 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\fitness_app\online_test\course_info_screen.dart           | Dart       |        319 |        131 |         14 |        464 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\fitness_app\online_test\design_course_app_theme.dart      | Dart       |         76 |          7 |         12 |         95 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\fitness_app\online_test\models\category.dart              | Dart       |         22 |         18 |          4 |         44 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\fitness_app\online_test\online_test_view.dart             | Dart       |        521 |         10 |         35 |        566 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\fitness_app\online_test\popular_course_list_view.dart     | Dart       |        197 |          3 |         13 |        213 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\fitness_app\online_test\robot_list_view.dart              | Dart       |        284 |          0 |         16 |        300 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\fitness_app\robot\Alert_dialog.dart                       | Dart       |        598 |         63 |         23 |        684 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\fitness_app\robot\Bottom_sheet.dart                       | Dart       |        135 |          2 |          6 |        143 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\fitness_app\robot\buy_times_dialog.dart                   | Dart       |         34 |          3 |          3 |         40 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\fitness_app\robot\my_robot_screen.dart                    | Dart       |        211 |          0 |         31 |        242 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\fitness_app\robot\no_add_dialog.dart                      | Dart       |         34 |          3 |          3 |         40 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\fitness_app\robot\no_more_robot_view.dart                 | Dart       |         79 |          6 |          4 |         89 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\fitness_app\robot\robot_body_view.dart                    | Dart       |        303 |         16 |          6 |        325 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\fitness_app\robot\robot_title_view.dart                   | Dart       |         86 |          0 |          4 |         90 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\fitness_app\ui_view\Announcement_view.dart                | Dart       |        141 |          0 |          3 |        144 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\fitness_app\ui_view\title_view.dart                       | Dart       |         47 |         34 |          4 |         85 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\help_screen.dart                                          | Dart       |        118 |          1 |          6 |        125 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\introduction_animation\components\care_view.dart          | Dart       |        115 |          0 |          6 |        121 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\introduction_animation\components\center_next_button.dart | Dart       |        205 |          0 |          7 |        212 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\introduction_animation\components\mood_diary_vew.dart     | Dart       |        114 |          0 |          6 |        120 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\introduction_animation\components\relax_view.dart         | Dart       |        106 |          0 |          5 |        111 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\introduction_animation\components\splash_view.dart        | Dart       |         85 |          0 |          5 |         90 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\introduction_animation\components\top_back_skip_view.dart | Dart       |         62 |         14 |          6 |         82 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\introduction_animation\components\welcome_view.dart       | Dart       |         90 |          0 |          5 |         95 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\introduction_animation\introduction_animation_screen.dart | Dart       |        110 |          0 |         11 |        121 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\invite_friend_screen.dart                                 | Dart       |        108 |          1 |          4 |        113 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\main.dart                                                 | Dart       |         47 |          0 |          5 |         52 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\navigation_home_screen.dart                               | Dart       |         83 |          2 |          8 |         93 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\lib\reset_sucess.dart                                         | Dart       |         34 |          3 |          3 |         40 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\pubspec.yaml                                                  | YAML       |         49 |         34 |         13 |         96 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\test\widget_test.dart                                         | Dart       |          5 |         20 |          7 |         32 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\web\index.html                                                | HTML       |         79 |         14 |          6 |         99 |
+| c:\Final\源代码\Front_end\best_flutter_ui_templates\web\manifest.json                                             | JSON       |         23 |          0 |          1 |         24 |
+| Total                                                                                                          |            |      8,317 |        711 |        587 |      9,615 |
++----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

@@ -1,0 +1,152 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > MessageController</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.example.dotdot.controller</a>
+</div>
+
+<h1>Coverage Summary for Class: MessageController (com.example.dotdot.controller)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">MessageController</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (3/3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (8/8)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.example.dotdot.controller;
+<i class="no-highlight">2</i>&nbsp;
+<i class="no-highlight">3</i>&nbsp;import com.example.dotdot.entity.Message;
+<i class="no-highlight">4</i>&nbsp;import com.example.dotdot.service.MessageService;
+<i class="no-highlight">5</i>&nbsp;import net.sf.json.JSONObject;
+<i class="no-highlight">6</i>&nbsp;import org.springframework.beans.factory.annotation.Autowired;
+<i class="no-highlight">7</i>&nbsp;import org.springframework.web.bind.annotation.RequestBody;
+<i class="no-highlight">8</i>&nbsp;import org.springframework.web.bind.annotation.RequestMapping;
+<i class="no-highlight">9</i>&nbsp;import org.springframework.web.bind.annotation.RestController;
+<i class="no-highlight">10</i>&nbsp;
+<i class="no-highlight">11</i>&nbsp;import java.util.List;
+<i class="no-highlight">12</i>&nbsp;
+<i class="no-highlight">13</i>&nbsp;
+<i class="no-highlight">14</i>&nbsp;@RestController
+<b class="fc"><i class="no-highlight">15</i>&nbsp;public class MessageController {</b>
+<i class="no-highlight">16</i>&nbsp;
+<i class="no-highlight">17</i>&nbsp;    @Autowired
+<i class="no-highlight">18</i>&nbsp;    private MessageService messageService;
+<i class="no-highlight">19</i>&nbsp;
+<i class="no-highlight">20</i>&nbsp;    /**
+<i class="no-highlight">21</i>&nbsp;     * 通过user_id获取所有的消息
+<i class="no-highlight">22</i>&nbsp;     * @param params &quot;user_id&quot; int
+<i class="no-highlight">23</i>&nbsp;     * @return List&lt;Message&gt;
+<i class="no-highlight">24</i>&nbsp;     * Message: Integer id,Integer user_id,String title,String content,String timestamp,Boolean type
+<i class="no-highlight">25</i>&nbsp;     */
+<i class="no-highlight">26</i>&nbsp;    @RequestMapping(&quot;/getMessages&quot;)
+<i class="no-highlight">27</i>&nbsp;    public List&lt;Message&gt; getMessages(@RequestBody Object params){
+<b class="fc"><i class="no-highlight">28</i>&nbsp;        JSONObject jsonObject = JSONObject.fromObject(params);</b>
+<b class="fc"><i class="no-highlight">29</i>&nbsp;        Integer user_id = jsonObject.getInt(&quot;user_id&quot;);</b>
+<b class="fc"><i class="no-highlight">30</i>&nbsp;        return  messageService.getMessages(user_id);</b>
+<i class="no-highlight">31</i>&nbsp;    }
+<i class="no-highlight">32</i>&nbsp;
+<i class="no-highlight">33</i>&nbsp;    /**
+<i class="no-highlight">34</i>&nbsp;     * 改变消息的type（目前只能true变false/false变false）
+<i class="no-highlight">35</i>&nbsp;     * 注意传入的内容是消息的id
+<i class="no-highlight">36</i>&nbsp;     * Message: Integer id,Integer user_id,String title,String content,String timestamp,Boolean type
+<i class="no-highlight">37</i>&nbsp;     * @param params  &quot;id&quot; int
+<i class="no-highlight">38</i>&nbsp;     * @return boolean true
+<i class="no-highlight">39</i>&nbsp;     */
+<i class="no-highlight">40</i>&nbsp;    @RequestMapping(&quot;/changeMessageType&quot;)
+<i class="no-highlight">41</i>&nbsp;    public Boolean changeType(@RequestBody Object params){
+<b class="fc"><i class="no-highlight">42</i>&nbsp;        JSONObject jsonObject = JSONObject.fromObject(params);</b>
+<b class="fc"><i class="no-highlight">43</i>&nbsp;        Integer id = jsonObject.getInt(&quot;id&quot;);</b>
+<b class="fc"><i class="no-highlight">44</i>&nbsp;        messageService.changeType(id);</b>
+<b class="fc"><i class="no-highlight">45</i>&nbsp;        return  true;</b>
+<i class="no-highlight">46</i>&nbsp;    }
+<i class="no-highlight">47</i>&nbsp;}
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2021-09-07 23:18</div>
+</div>
+</body>
+</html>

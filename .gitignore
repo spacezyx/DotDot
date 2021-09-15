@@ -1,0 +1,40 @@
+# basic  
+*.class
+*.log
+target/
+.classpath
+.project
+.settings
+<<<<<<< HEAD
+.ini 
+=======
+>>>>>>> 4f5d301 (update .gitignore)
+
+# idea
+*.iml
+.idea/
+*.ipr
+*.iws
+
+# Generated files
+bin/
+gen/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+<<<<<<< HEAD
+.mtj.tmp/
+=======
+.mtj.tmp/
+>>>>>>> 4f5d301 (update .gitignore)
